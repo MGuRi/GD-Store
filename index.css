@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #efefef;
+    background-color: #f8f8f8;
     /* padding-top: 70px; */
 }
 
@@ -38,8 +38,12 @@ header {
     padding-left: auto;
     padding-right: auto;
     padding-top: 2%;
-    margin: 5vw;
+    margin: 0 5vw;
 
+}
+
+#container section {
+    margin-bottom: 2vh;
 }
 
 .category {
@@ -54,7 +58,6 @@ ul.itemlist {
     max-width: 1600px;
     width: 100%;
     margin-left: 1.5vw;
-
 }
   
 ul.itemlist li.item {
@@ -77,19 +80,27 @@ ul.itemlist li.item {
     overflow:inherit;
     text-align: center;
 }
+
+
+/** ITEM SELECTED **/
+
+ul li.selected {
+    box-shadow: inset 0 0 0 1000px rgba(0,255,0,.2) !important;
+}
+
 li.item:hover, .cart:hover {
     transition: 0.2s;
     transform: scale(1.05);
 }
 
 /* 나중에 필요시 사용 ex) 클릭시 scale bounce effect */
-@keyframes bounce {
+/* @keyframes bounce {
     0% { transform: scale(1.1); opacity: 1 }
     50% { transform: scale(1.6); opacity: .7; }
     60% { transform: scale(0.6); opacity: 1 }
     80% { transform: scale(0.95) }
     100% { transform: scale(0.85) }
-}
+} */
 
 /* 각 줄의 1, 2, 3번째 품목 오른쪽 마진 */
 li.item {
@@ -118,7 +129,6 @@ li.item .item_price {
     font-size: 1em;
     color: rgb(88, 88, 88);
 }
-
 
 /* Footer Start */
 
@@ -178,12 +188,12 @@ footer #content .category {
 
 footer .price_div {
     width: 100%;
-    text-align: left;
+    vertical-align: bottom;
 }
 
-footer .price_div .goods_name {
-
-    left: 0;
+footer .price_div .goods_name, footer .price_div .goods_count {
+    border: 1px solid #aaa;
+    float: left;
 }
 
 .footer_icon {
